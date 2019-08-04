@@ -12,7 +12,7 @@
   width: 100%;
 }
 
-.WheelsChoicesItems .wheel-image.active {
+.WheelsChoicesItems.active .wheel-image {
   opacity: 1;
   transform: scale(1.2, 1.2);
 }
@@ -27,7 +27,7 @@
   z-index: 1;
 }
 
-.WheelsChoicesItems .color-description.active {
+.WheelsChoicesItems.active .color-description {
   visibility: visible;
 }
 

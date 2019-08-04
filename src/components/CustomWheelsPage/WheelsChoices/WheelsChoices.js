@@ -1,10 +1,11 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import {
   setCustomItem,
   changeCustomItem
 } from "../../../store/actions/custom.action";
 import WheelsChoicesItem from "./WheelsChoicesItem/WheelsChoicesItem";
+import Select from "../../Select/Select";
 
 export const WheelsChoices = ({
   wheels,
@@ -12,31 +13,28 @@ export const WheelsChoices = ({
   setCustomItem,
   changeCustomItem
 }) => {
-  const [active, setActive] = useState(null);
   useEffect(() => {
     if (wheels.length) {
       setCustomItem(wheels[0]);
-      setActive(wheels[0].id);
     }
   }, []);
 
-  const onClick = id => {
-    if (active === id) return;
-    setActive(id);
+  const onClick = (isActive, id) => {
+    if (isActive) return;
     changeCustomItem(byId[id]);
   };
 
   return (
-    <Fragment>
+    <Select>
       {wheels.map(wheel => (
-        <WheelsChoicesItem
+        <Select.Option
           key={wheel.id}
-          active={wheel.id === active}
+          id={wheel.id}
           onClick={onClick}
-          {...wheel}
+          children={<WheelsChoicesItem {...wheel} />}
         />
       ))}
-    </Fragment>
+    </Select>
   );
 };
 
