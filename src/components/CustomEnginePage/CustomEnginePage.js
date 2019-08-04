@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import CustomPageLayout from "../CustomPageLayout/CustomPageLayout";
 import EngineChoices from "./EngineChoices/EngineChoices";
-import "./CustomEnginePage.css";
 
 export const CustomEnginePage = ({ custom, loaded, history }) => {
   useEffect(() => {

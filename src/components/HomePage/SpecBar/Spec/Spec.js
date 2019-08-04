@@ -1,13 +1,12 @@
 import React from "react";
-import "./Spec.css";
 
 export const Spec = ({ primary, units, subText }) => {
   return (
     <div className="Spec">
-      <p className="Spec__primary">
+      <p className="primary">
         {primary} <span>{units}</span>
       </p>
-      <p className="Spec__secondary">{subText}</p>
+      <p className="secondary">{subText}</p>
     </div>
   );
 };

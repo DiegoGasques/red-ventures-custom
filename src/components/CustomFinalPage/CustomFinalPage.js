@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import Page from "../Page/Page";
 import { clearCustom } from "../../store/actions/custom.action";
 import restartImage from "../../assets/refresh.svg";
-import "./CustomFinalPage.css";
 
 export const CustomFinalPage = ({
   clearCustom,

@@ -1,0 +1,85 @@
+.CustomFinalPage {
+  .main-content {
+    display: flex;
+    width: 100%;
+  }
+
+  .final-model-details,
+  .image-container {
+    flex-grow: 1;
+  }
+
+  .final-model-details h2 {
+    font-weight: 300;
+    font-size: 45px;
+    letter-spacing: 3.75px;
+    margin: 4rem 0 1rem 0;
+
+    color: $black;
+  }
+
+  .final-model-details h2 span {
+    font-weight: 400;
+    font-size: 45px;
+    letter-spacing: 3.75px;
+
+    color: $black;
+  }
+
+  .final-model-details h2 .r {
+    font-weight: 500;
+    font-size: 45px;
+    letter-spacing: 3.75px;
+
+    color: $red;
+  }
+
+  .image-container img {
+    padding: 10rem 0 0 2rem;
+  }
+
+  .values-table hr {
+    opacity: 0.3;
+  }
+
+  .values-table > * {
+    margin: 1.7rem 0;
+  }
+
+  .values-table .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .price {
+    font-weight: 500;
+    font-size: 22px;
+    color: $red;
+  }
+
+  .label {
+    font-size: 22px;
+    color: $black;
+    font-weight: 400;
+  }
+
+  .final-price span {
+    font-size: 2rem;
+  }
+
+  button {
+    border: none;
+    background: none;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 9.42222px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin: 4rem auto 0;
+    cursor: pointer;
+
+    color: $black;
+  }
+}

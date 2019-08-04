@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import CustomPageLayout from "../CustomPageLayout/CustomPageLayout";
 import WheelsChoices from "./WheelsChoices/WheelsChoices";
-import "./CustomWheelsPage.css";
 
 export const CustomWheelsPage = ({ custom, loaded, history }) => {
   useEffect(() => {

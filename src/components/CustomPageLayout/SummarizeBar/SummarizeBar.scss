@@ -1,0 +1,106 @@
+.SummarizeBar {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 8px 0px 47px rgba(0, 0, 0, 0.076002);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .info {
+    margin-right: 14%;
+    display: flex;
+    align-items: center;
+  }
+
+  .total-sum {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 2.06061px;
+    margin-right: 83px;
+
+    color: $grey;
+  }
+
+  .total-sum div {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: 3.75px;
+
+    color: $red;
+  }
+
+  .model {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 2.06061px;
+
+    color: $black;
+  }
+
+  .customization {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .engine {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    margin-right: 40%;
+    display: flex;
+
+    color: $black;
+  }
+
+  .engine span {
+    font-weight: 500;
+    font-size: 18px;
+
+    color: $red;
+  }
+
+  .color {
+    height: 22px;
+    margin-right: 40%;
+  }
+
+  .color img {
+    width: 22px;
+  }
+
+  .wheels {
+    height: 39px;
+  }
+
+  .wheels img {
+    width: 46px;
+  }
+
+  .next-page {
+    // margin-left: 22%;
+    flex-grow: 1;
+    text-align: right;
+    border: none;
+    background: none;
+  }
+
+  .next-page a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    letter-spacing: 2.83333px;
+
+    color: $black;
+  }
+
+  .next-page img {
+    transform: translateY(3px);
+    margin-left: 3px;
+  }
+}

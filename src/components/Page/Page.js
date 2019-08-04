@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "../Container/Container";
 import NavBar from "../NavBar/NavBar";
-import "./Page.css";
 
 export const Page = ({ children }) => {
   return (

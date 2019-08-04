@@ -1,0 +1,25 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.8rem;
+
+  .list {
+    display: flex;
+  }
+
+  .item {
+    letter-spacing: 0.888889px;
+    color: rgba(15, 28, 45, 0.57);
+    font-weight: 500;
+  }
+
+  .item:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+
+  .item.active {
+    color: $black;
+    border-bottom: 2px solid $red;
+  }
+}

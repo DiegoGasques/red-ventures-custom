@@ -7,7 +7,6 @@ import CustomEnginePage from "./components/CustomEnginePage/CustomEnginePage";
 import CustomColorPage from "./components/CustomColorPage/CustomColorPage";
 import CustomWheelsPage from "./components/CustomWheelsPage/CustomWheelsPage";
 import CustomFinalPage from "./components/CustomFinalPage/CustomFinalPage";
-import "./App.css";
 
 function App({ dispatch }) {
   useEffect(() => {

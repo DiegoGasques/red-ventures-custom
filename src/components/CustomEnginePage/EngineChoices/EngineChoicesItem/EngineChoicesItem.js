@@ -1,5 +1,4 @@
 import React from "react";
-import "./EngineChoicesItem.css";
 
 export const EngineChoicesItem = ({
   kwh,

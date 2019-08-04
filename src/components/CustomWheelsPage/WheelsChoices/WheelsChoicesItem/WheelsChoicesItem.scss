@@ -1,0 +1,48 @@
+.WheelsChoicesItems {
+  position: relative;
+
+  .wheel-image-container {
+    text-align: center;
+    width: 220px;
+  }
+
+  .wheel-image {
+    opacity: 0.5;
+    width: 100%;
+  }
+
+  .color-description {
+    position: absolute;
+    bottom: -60;
+    left: 0;
+    right: 0;
+    text-align: center;
+    visibility: hidden;
+    z-index: 1;
+  }
+
+  .color-name {
+    font-size: 22px;
+    text-align: center;
+
+    color: $black;
+  }
+
+  .color-price {
+    font-size: 22px;
+    text-align: center;
+
+    color: $red;
+  }
+}
+
+.WheelsChoicesItems.active {
+  .wheel-image {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+
+  .color-description {
+    visibility: visible;
+  }
+}

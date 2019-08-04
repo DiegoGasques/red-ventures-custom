@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import CustomPageLayout from "../CustomPageLayout/CustomPageLayout";
 import ColorChoices from "./ColorChoices/ColorChoices";
-import "./CustomColorPage.css";
 
 export const CustomColorPage = ({ custom, description, loaded, history }) => {
   const [idActive, setIdActive] = useState(null);

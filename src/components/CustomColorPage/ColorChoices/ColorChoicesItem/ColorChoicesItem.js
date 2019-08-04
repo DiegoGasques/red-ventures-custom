@@ -1,5 +1,4 @@
 import React from "react";
-import "./ColorChoicesItem.css";
 
 export const ColorChoicesItem = ({ id, label, price, onClick, className }) => {
   const handleClick = () => onClick(id);

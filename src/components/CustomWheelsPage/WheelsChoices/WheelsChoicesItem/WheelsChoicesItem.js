@@ -1,5 +1,4 @@
 import React from "react";
-import "./WheelsChoicesItem.css";
 
 export const WheelsChoicesItems = ({
   id,

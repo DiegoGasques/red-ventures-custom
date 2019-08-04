@@ -1,0 +1,50 @@
+.ColorChoicesItem {
+  .color-border {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+
+    /* background: #555; */
+    background: rgba(112, 112, 112, 0.0915704);
+  }
+
+  .color-image {
+    width: 44px;
+  }
+
+  .color-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    padding: 1rem 2rem;
+  }
+
+  .color-name {
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 35px;
+
+    color: $black;
+  }
+
+  .color-price {
+    font-weight: normal;
+    font-size: 22px;
+
+    color: $red;
+  }
+}
+
+.ColorChoicesItem.active {
+  .color-border {
+    background: #555;
+  }
+
+  .color-description {
+    visibility: visible;
+  }
+}

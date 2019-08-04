@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Container from "../../Container/Container";
 import nextArrow from "../../../assets/next-arrow.svg";
-import "./SummarizeBar.css";
 
 export const SummarizeBar = ({ total, items, nextPage, model = "Model R" }) => {
   return (

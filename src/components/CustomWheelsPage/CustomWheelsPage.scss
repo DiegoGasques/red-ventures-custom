@@ -1,0 +1,16 @@
+.CustomWheelsPage {
+  h3 {
+    font-weight: 300;
+    font-size: 45px;
+    letter-spacing: 3.75px;
+    text-align: center;
+    margin: 5rem 0;
+
+    color: $black;
+  }
+
+  .choises-container {
+    display: flex;
+    justify-content: space-around;
+  }
+}

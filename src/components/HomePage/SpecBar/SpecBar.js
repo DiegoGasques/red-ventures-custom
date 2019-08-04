@@ -1,6 +1,5 @@
 import React from "react";
 import Spec from "./Spec/Spec";
-import "./SpecBar.css";
 
 export const SpecBar = () => {
   return (

@@ -1,0 +1,73 @@
+.EngineChoicesItem {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.2rem 1.2rem 1.2rem 2rem;
+  margin-bottom: 3rem;
+  background: #f7f9fa;
+  cursor: pointer;
+
+  .type {
+    font-weight: 300;
+    font-size: 26px;
+    letter-spacing: 2.83333px;
+
+    color: $grey;
+  }
+
+  .type span {
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 2.83333px;
+
+    color: $grey;
+  }
+
+  .kwh,
+  .range {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 2.83333px;
+
+    color: $grey;
+  }
+
+  .indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-left: 2rem;
+    background: $red;
+    visibility: hidden;
+  }
+
+  .add-price {
+    position: absolute;
+    bottom: -33px;
+    right: 0;
+
+    font-size: 22px;
+    color: $red;
+    visibility: hidden;
+  }
+}
+
+.EngineChoicesItem.active {
+  .type span {
+    color: $red;
+  }
+
+  .type,
+  .kwh,
+  .range {
+    color: $black;
+    font-weight: 500;
+  }
+
+  .add-price,
+  .indicator {
+    visibility: visible;
+  }
+}
