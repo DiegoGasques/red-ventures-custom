@@ -1,0 +1,23 @@
+.Spec {
+  width: 107px;
+}
+
+.Spec__primary {
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 42px;
+  color: #ab1725;
+}
+
+.Spec__primary span {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.Spec__secondary {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  border-bottom: 3px solid #890f00;
+  padding-bottom: 0.3rem;
+}

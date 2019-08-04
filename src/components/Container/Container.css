@@ -1,0 +1,11 @@
+.Container {
+  display: flex;
+  max-width: 1210px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Container.column {
+  flex-direction: column;
+  height: 100%;
+}

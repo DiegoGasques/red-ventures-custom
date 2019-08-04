@@ -1,0 +1,30 @@
+.CustomEnginePage .main-content {
+  display: flex;
+}
+
+.engine-selection {
+  width: 50%;
+  padding-left: 2.7rem;
+}
+
+.engine-selection h3 {
+  font-weight: 300;
+  font-size: 45px;
+  letter-spacing: 3.75px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+
+  color: #0f1c2d;
+}
+
+.engine-image {
+  width: 50%;
+  position: relative;
+}
+
+.engine-image img {
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 80px;
+}

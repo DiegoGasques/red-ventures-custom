@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { setInitData } from "./store/actions/shared.action";
+import HomePage from "./components/HomePage/HomePage";
+import CustomEnginePage from "./components/CustomEnginePage/CustomEnginePage";
+import CustomColorPage from "./components/CustomColorPage/CustomColorPage";
+import CustomWheelsPage from "./components/CustomWheelsPage/CustomWheelsPage";
+import CustomFinalPage from "./components/CustomFinalPage/CustomFinalPage";
+import "./App.css";
 
-function App() {
+function App({ dispatch }) {
+  useEffect(() => {
+    dispatch(setInitData());
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route
+          exact
+          path="/model-r/custom/1"
+          render={props => {
+            return <CustomEnginePage {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/model-r/custom/2"
+          render={props => {
+            return <CustomColorPage {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/model-r/custom/3"
+          render={props => {
+            return <CustomWheelsPage {...props} />;
+          }}
+        />
+        <Route
+          exact
+          path="/model-r/custom/final"
+          render={props => {
+            return <CustomFinalPage {...props} />;
+          }}
+        />
+        <Route component={HomePage} />
+      </Switch>
+    </Router>
   );
 }
 
-export default App;
+export default connect()(App);

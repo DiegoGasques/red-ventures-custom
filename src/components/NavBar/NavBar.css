@@ -1,0 +1,25 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.8rem;
+}
+
+.NavBar__list {
+  display: flex;
+}
+
+.NavBar__item {
+  letter-spacing: 0.888889px;
+  color: rgba(15, 28, 45, 0.57);
+  font-weight: 500;
+}
+
+.NavBar__item:not(:last-child) {
+  margin-right: 3.2rem;
+}
+
+.NavBar__item.active {
+  color: #0f1c2d;
+  border-bottom: 2px solid #ab1725;
+}
