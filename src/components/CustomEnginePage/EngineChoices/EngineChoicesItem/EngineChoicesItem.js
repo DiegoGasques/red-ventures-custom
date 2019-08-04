@@ -2,26 +2,28 @@ import React from "react";
 import "./EngineChoicesItem.css";
 
 export const EngineChoicesItem = ({
-  id,
-  onClick,
   kwh,
   type,
   range,
   price,
-  active
+  className,
+  onClick
 }) => {
-  const handleClick = () => onClick(id);
   return (
-    <div className="EngineChoicesItem" onClick={handleClick}>
-      <div className={`type ${active ? "active" : ""}`}>
+    <div
+      className={`EngineChoicesItem ${className ? className : ""}`}
+      onclick={() => {
+        console.log("I am here");
+        onClick();
+      }}
+    >
+      <div className="type">
         {kwh} <span>{type}</span>
       </div>
-      <div className={`kwh ${active ? "active" : ""}`}>{kwh} kwh</div>
-      <div className={`range ${active ? "active" : ""}`}>
-        {range} miles range
-      </div>
-      <div className={`indicator ${active ? "show" : ""}`} />
-      <div className={`add-price ${active ? "show" : ""}`}>
+      <div className="kwh">{kwh} kwh</div>
+      <div className="range">{range} miles range</div>
+      <div className="indicator" />
+      <div className="add-price">
         {parseInt(price) === 0 ? "Included" : `+ $${price}`}
       </div>
     </div>

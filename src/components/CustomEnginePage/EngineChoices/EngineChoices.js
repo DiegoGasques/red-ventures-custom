@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, createContext, useContext } from "react";
 import { connect } from "react-redux";
 import {
   setCustomItem,
@@ -6,37 +6,76 @@ import {
 } from "../../../store/actions/custom.action";
 import EngineChoicesItem from "./EngineChoicesItem/EngineChoicesItem";
 
+const SelectContext = createContext({});
+
+const useSelectContext = () => {
+  const context = useContext(SelectContext);
+  if (!context) {
+    throw new Error("You cannot use options outside a select component!");
+  }
+  return context;
+};
+
+const Select = ({ children }) => {
+  const [active, setActive] = useState(null);
+  let trackId = 1;
+  return (
+    <SelectContext.Provider value={{ setActive, active }}>
+      {React.Children.map(children, Child => {
+        const ClonedChild = React.cloneElement(Child, { trackId });
+        trackId += 1;
+        return ClonedChild;
+      })}
+    </SelectContext.Provider>
+  );
+};
+
+const Option = ({ children, trackId, id, onClick }) => {
+  const { active, setActive } = useSelectContext();
+  useEffect(() => {
+    if (trackId === 1) setActive(id);
+  }, []);
+  const handleClick = () => {
+    console.log("Clicked");
+    onClick(active === id, id);
+    setActive(id);
+  };
+  return React.Children.map(children, Child =>
+    React.cloneElement(Child, {
+      className: Child.props.className + `${active === id ? " active" : ""}`,
+      onClick: handleClick
+    })
+  );
+};
+
 export const EngineChoices = ({
   engines,
   byId,
   setCustomItem,
   changeCustomItem
 }) => {
-  const [active, setActive] = useState(null);
   useEffect(() => {
     if (engines.length) {
       setCustomItem(engines[0]);
-      setActive(engines[0].id);
     }
   }, []);
 
-  const onClick = id => {
-    if (active === id) return;
-    setActive(id);
+  const onClick = (isActive, id) => {
+    if (isActive) return;
     changeCustomItem(byId[id]);
   };
 
   return (
-    <Fragment>
+    <Select>
       {engines.map(engine => (
-        <EngineChoicesItem
+        <Option
           key={engine.id}
-          active={engine.id === active}
+          id={engine.id}
           onClick={onClick}
-          {...engine}
+          children={<EngineChoicesItem {...engine} />}
         />
       ))}
-    </Fragment>
+    </Select>
   );
 };
 

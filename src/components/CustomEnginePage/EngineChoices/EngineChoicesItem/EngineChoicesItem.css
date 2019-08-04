@@ -26,7 +26,7 @@
   color: #a8a8a8;
 }
 
-.EngineChoicesItem .type.active span {
+.EngineChoicesItem.active .type span {
   color: #ab1725;
 }
 
@@ -39,9 +39,9 @@
   color: #a8a8a8;
 }
 
-.EngineChoicesItem .type.active,
-.EngineChoicesItem .kwh.active,
-.EngineChoicesItem .range.active {
+.EngineChoicesItem.active .type,
+.EngineChoicesItem.active .kwh,
+.EngineChoicesItem.active .range {
   color: #0f1c2d;
   font-weight: 500;
 }
@@ -65,7 +65,7 @@
   visibility: hidden;
 }
 
-.EngineChoicesItem .add-price.show,
-.EngineChoicesItem .indicator.show {
+.EngineChoicesItem.active .add-price,
+.EngineChoicesItem.active .indicator {
   visibility: visible;
 }
