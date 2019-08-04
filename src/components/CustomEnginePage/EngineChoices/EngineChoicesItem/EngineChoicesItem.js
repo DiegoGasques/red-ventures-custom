@@ -12,10 +12,7 @@ export const EngineChoicesItem = ({
   return (
     <div
       className={`EngineChoicesItem ${className ? className : ""}`}
-      onclick={() => {
-        console.log("I am here");
-        onClick();
-      }}
+      onClick={onClick}
     >
       <div className="type">
         {kwh} <span>{type}</span>
