@@ -13,7 +13,7 @@
   background: rgba(112, 112, 112, 0.0915704);
 }
 
-.ColorChoicesItem .color-border.active {
+.ColorChoicesItem.active .color-border {
   background: #555;
   /* background: rgba(112, 112, 112, 0.0915704); */
 }
@@ -30,7 +30,7 @@
   padding: 1rem 2rem;
 }
 
-.ColorChoicesItem .color-description.active {
+.ColorChoicesItem.active .color-description {
   visibility: visible;
 }
 

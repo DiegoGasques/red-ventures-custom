@@ -5,6 +5,7 @@ import {
   changeCustomItem
 } from "../../../store/actions/custom.action";
 import ColorChoicesItem from "./ColorChoicesItem/ColorChoicesItem";
+import Select from "../../Select/Select";
 
 export const ColorChoices = ({
   colors,
@@ -13,33 +14,30 @@ export const ColorChoices = ({
   changeCustomItem,
   onChange
 }) => {
-  const [active, setActive] = useState(null);
   useEffect(() => {
     if (colors.length) {
       setCustomItem(colors[0]);
-      setActive(colors[0].id);
       onChange(colors[0].id);
     }
   }, []);
 
-  const onClick = id => {
-    if (active === id) return;
-    setActive(id);
+  const onClick = (isActive, id) => {
+    if (isActive) return;
     onChange(id);
     changeCustomItem(byId[id]);
   };
 
   return (
-    <Fragment>
+    <Select>
       {colors.map(color => (
-        <ColorChoicesItem
+        <Select.Option
           key={color.id}
-          active={color.id === active}
+          id={color.id}
           onClick={onClick}
-          {...color}
+          children={<ColorChoicesItem {...color} />}
         />
       ))}
-    </Fragment>
+    </Select>
   );
 };
 
