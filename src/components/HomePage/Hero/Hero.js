@@ -6,12 +6,12 @@ import homeModelR from "../../../assets/home-model.png";
 export const Hero = () => {
   return (
     <div className="Hero">
-      <p className="heading">
+      <div className="heading">
         <div>Build your</div>
         <div>
           Model <span>R</span>
         </div>
-      </p>
+      </div>
       <div className="homeModelR">
         <img src={homeModelR} alt="Model R" />
       </div>

@@ -1,11 +1,20 @@
 .CustomEnginePage {
   .main-content {
     display: flex;
+    @media (max-width: 700px) {
+      flex-direction: column;
+      position: relative;
+    }
   }
 
   .engine-selection {
     width: 50%;
     padding-left: 2.7rem;
+    @media (max-width: 700px) {
+      width: 100%;
+      padding-left: 0;
+      margin-top: 255px;
+    }
   }
 
   .engine-selection h3 {
@@ -16,11 +25,23 @@
     margin-bottom: 30px;
 
     color: $black;
+    @media (max-width: 700px) {
+      font-size: 22px;
+      letter-spacing: 1.83333px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      margin: 0;
+    }
   }
 
   .engine-image {
     width: 50%;
     position: relative;
+    @media (max-width: 700px) {
+      width: 100%;
+      transform: rotate(90deg);
+    }
   }
 
   .engine-image img {
@@ -28,5 +49,11 @@
     position: absolute;
     top: 0;
     left: 80px;
+    @media (max-width: 700px) {
+      height: inherit;
+      width: 190px;
+      top: -159px;
+      left: 217px;
+    }
   }
 }

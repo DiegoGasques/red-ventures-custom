@@ -20,4 +20,24 @@
     border-bottom: 3px solid $red;
     padding-bottom: 0.3rem;
   }
+
+  @media (max-width: 500px) {
+    width: 90px;
+
+    .primary {
+      font-weight: 600;
+      font-size: 32px;
+    }
+
+    .primary span {
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    .secondary {
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 1.16667px;
+    }
+  }
 }
