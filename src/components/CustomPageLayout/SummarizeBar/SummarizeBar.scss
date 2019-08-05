@@ -1,5 +1,5 @@
 .SummarizeBar {
-  padding: 20px 0;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   box-shadow: 8px 0px 47px rgba(0, 0, 0, 0.076002);
@@ -7,11 +7,18 @@
   bottom: 0;
   left: 0;
   right: 0;
+  @media (max-width: 880px) {
+    position: relative;
+    padding: 15px;
+  }
 
   .info {
     margin-right: 14%;
     display: flex;
     align-items: center;
+    @media (max-width: 880px) {
+      margin-right: 10%;
+    }
   }
 
   .total-sum {
@@ -22,15 +29,24 @@
     margin-right: 83px;
 
     color: $grey;
+    @media (max-width: 880px) {
+      margin-right: 60px;
+      letter-spacing: 1.8061px;
+      font-size: 14px;
+    }
   }
 
   .total-sum div {
     font-weight: 300;
     font-size: 32px;
-    line-height: 50px;
+    line-height: 40px;
     letter-spacing: 3.75px;
 
     color: $red;
+    @media (max-width: 880px) {
+      letter-spacing: 3px;
+      font-size: 26px;
+    }
   }
 
   .model {
@@ -40,6 +56,13 @@
     letter-spacing: 2.06061px;
 
     color: $black;
+    @media (max-width: 880px) {
+      letter-spacing: 1.8px;
+      font-size: 16px;
+    }
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
 
   .customization {
@@ -94,12 +117,14 @@
   }
 
   .next-page a {
-    font-style: normal;
-    font-weight: normal;
     font-size: 22px;
     letter-spacing: 2.83333px;
 
     color: $black;
+    @media (max-width: 880px) {
+      letter-spacing: 2.3px;
+      font-size: 20px;
+    }
   }
 
   .next-page img {
