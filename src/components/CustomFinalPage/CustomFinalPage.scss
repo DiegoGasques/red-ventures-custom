@@ -41,14 +41,17 @@
 
   .image-container img {
     padding: 10rem 0 0 2rem;
+    max-width: 520px;
+    width: 100%;
     @media (max-width: 1042px) {
-      width: 100%;
+      max-width: 400px;
       padding: 7rem 0 0 0;
     }
     @media (max-width: 800px) {
       padding: 5rem 0 0 0;
     }
     @media (max-width: 700px) {
+      max-width: 300px;
       padding: 4rem 0 0 0;
     }
   }

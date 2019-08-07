@@ -45,9 +45,12 @@
       font-size: 22px;
       letter-spacing: 1.83333px;
       position: absolute;
-      top: -37px;
+      top: -67px;
       left: 10px;
       margin: 0;
+    }
+    @media (max-width: 500px) {
+      top: -87px;
     }
   }
 
@@ -64,9 +67,12 @@
       font-size: 14px;
       letter-spacing: 1.83333px;
       position: absolute;
-      top: 0;
+      top: -30px;
       left: 10px;
       margin: 0;
+    }
+    @media (max-width: 500px) {
+      top: -50px;
     }
   }
 
