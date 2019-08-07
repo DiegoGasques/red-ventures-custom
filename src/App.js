@@ -1,17 +1,12 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { setInitData } from "./store/actions/shared.action";
 import HomePage from "./components/HomePage/HomePage";
 import CustomEnginePage from "./components/CustomEnginePage/CustomEnginePage";
 import CustomColorPage from "./components/CustomColorPage/CustomColorPage";
 import CustomWheelsPage from "./components/CustomWheelsPage/CustomWheelsPage";
 import CustomFinalPage from "./components/CustomFinalPage/CustomFinalPage";
 
-function App({ dispatch }) {
-  useEffect(() => {
-    dispatch(setInitData());
-  }, []);
+function App() {
   return (
     <Router>
       <Switch>
@@ -49,4 +44,4 @@ function App({ dispatch }) {
   );
 }
 
-export default connect()(App);
+export default App;
