@@ -11,6 +11,9 @@
     position: relative;
     padding: 15px;
   }
+  @media (max-width: 700px) {
+    padding: 8px 12px;
+  }
 
   .info {
     margin-right: 14%;

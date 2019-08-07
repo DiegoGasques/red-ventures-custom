@@ -3,16 +3,31 @@
     display: flex;
     margin-top: 7%;
     position: relative;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
   }
 
   .car-color-image {
     display: inline-block;
     width: 100%;
-    padding-right: 4rem;
+    padding-right: 2rem;
+    @media (max-width: 980px) {
+      margin-top: 3rem;
+    }
+    @media (max-width: 700px) {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   .car-color-image img {
     padding-top: 3rem;
+    width: 100%;
+    @media (max-width: 700px) {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   h3 {
@@ -22,6 +37,18 @@
     margin-bottom: 1.3rem;
 
     color: $black;
+    @media (max-width: 980px) {
+      font-size: 35px;
+      letter-spacing: 2.83333px;
+    }
+    @media (max-width: 700px) {
+      font-size: 22px;
+      letter-spacing: 1.83333px;
+      position: absolute;
+      top: -100px;
+      left: 10px;
+      margin: 0;
+    }
   }
 
   .description {
@@ -29,14 +56,43 @@
     margin-bottom: 4rem;
 
     color: $grey;
+    @media (max-width: 980px) {
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 700px) {
+      font-size: 14px;
+      letter-spacing: 1.83333px;
+      position: absolute;
+      top: -55px;
+      left: 10px;
+      margin: 0;
+    }
   }
 
   .choises-container {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 700px) {
+      justify-content: space-around;
+      margin-top: 40px;
+    }
   }
 
   .color-selection {
     padding: 0 6rem 4rem 0;
+
+    @media (max-width: 980px) {
+      padding: 0 4rem 2rem 0;
+      width: 80%;
+    }
+    @media (max-width: 880px) {
+      padding: 0 2rem 1rem 0;
+      width: 93%;
+    }
+    @media (max-width: 700px) {
+      padding: 2rem 0;
+      width: 100%;
+    }
   }
 }

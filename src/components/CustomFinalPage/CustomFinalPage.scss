@@ -2,11 +2,55 @@
   .main-content {
     display: flex;
     width: 100%;
+    position: relative;
+    @media (max-width: 1042px) {
+      flex-direction: column;
+      flex-grow: 1;
+      // padding: 0 10rem;
+      width: 70%;
+      margin: 0 auto;
+    }
+    @media (max-width: 880px) {
+      // padding: 0 6rem;
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) {
+      // padding: 0 2rem;
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 
   .final-model-details,
   .image-container {
     flex-grow: 1;
+  }
+
+  .image-container {
+    @media (max-width: 1042px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width: 880px) {
+    }
+    @media (max-width: 700px) {
+    }
+  }
+
+  .image-container img {
+    padding: 10rem 0 0 2rem;
+    @media (max-width: 1042px) {
+      width: 100%;
+      padding: 7rem 0 0 0;
+    }
+    @media (max-width: 800px) {
+      padding: 5rem 0 0 0;
+    }
+    @media (max-width: 700px) {
+      padding: 4rem 0 0 0;
+    }
   }
 
   .final-model-details h2 {
@@ -16,6 +60,23 @@
     margin: 4rem 0 1rem 0;
 
     color: $black;
+    @media (max-width: 1042px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 40px;
+      letter-spacing: 3px;
+      margin: 2rem 0 0 0;
+    }
+    @media (max-width: 880px) {
+      top: -15px;
+      font-size: 33px;
+      letter-spacing: 2.4px;
+    }
+    @media (max-width: 700px) {
+      font-size: 22px;
+      letter-spacing: 1.83333px;
+    }
   }
 
   .final-model-details h2 span {
@@ -24,6 +85,18 @@
     letter-spacing: 3.75px;
 
     color: $black;
+    @media (max-width: 1042px) {
+      font-size: 40px;
+      letter-spacing: 3px;
+    }
+    @media (max-width: 880px) {
+      font-size: 33px;
+      letter-spacing: 2.4px;
+    }
+    @media (max-width: 700px) {
+      font-size: 22px;
+      letter-spacing: 1.83333px;
+    }
   }
 
   .final-model-details h2 .r {
@@ -32,10 +105,18 @@
     letter-spacing: 3.75px;
 
     color: $red;
-  }
-
-  .image-container img {
-    padding: 10rem 0 0 2rem;
+    @media (max-width: 1042px) {
+      font-size: 40px;
+      letter-spacing: 3px;
+    }
+    @media (max-width: 880px) {
+      font-size: 33px;
+      letter-spacing: 2.4px;
+    }
+    @media (max-width: 700px) {
+      font-size: 22px;
+      letter-spacing: 1.83333px;
+    }
   }
 
   .values-table hr {
@@ -55,16 +136,25 @@
     font-weight: 500;
     font-size: 22px;
     color: $red;
+    @media (max-width: 700px) {
+      font-size: 18px;
+    }
   }
 
   .label {
     font-size: 22px;
     color: $black;
     font-weight: 400;
+    @media (max-width: 700px) {
+      font-size: 18px;
+    }
   }
 
   .final-price span {
     font-size: 2rem;
+    @media (max-width: 700px) {
+      font-size: 26px;
+    }
   }
 
   button {
@@ -81,5 +171,8 @@
     cursor: pointer;
 
     color: $black;
+    @media (max-width: 1042px) {
+      margin-bottom: 4rem;
+    }
   }
 }

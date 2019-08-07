@@ -1,9 +1,21 @@
 .WheelsChoicesItems {
   position: relative;
+  @media (max-width: 700px) {
+    display: flex;
+    padding: 1.2rem;
+  }
 
   .wheel-image-container {
     text-align: center;
     width: 220px;
+    @media (max-width: 700px) {
+      width: 168px;
+      margin-right: 2rem;
+    }
+    @media (max-width: 500px) {
+      width: 145px;
+      margin-right: 2rem;
+    }
   }
 
   .wheel-image {
@@ -19,6 +31,11 @@
     text-align: center;
     visibility: hidden;
     z-index: 1;
+    @media (max-width: 700px) {
+      position: relative;
+      flex-grow: 1;
+      text-align: center;
+    }
   }
 
   .color-name {
