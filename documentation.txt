@@ -1,0 +1,8 @@
+[Architecture]
+  - The app has a top level state that is set when HomePage is mounted.
+  - The state gets the data from api and normalizes it. Also there is a loaded and custom field.
+  - Custom state field is an array and is very important piece of the puzzle since the order in which objects describing the customization match the order in which you go through the customization pages.
+  - For the reason above, was important to add private routing. If the data was not loaded, or the number of items in the custom array is greater than the page number the user is currently in, it should go back to HomePage.
+  - Components are encapsulated by page or by generic layout function.
+  - Actions are dispatched when interaction happens in the page, which goes through the reducer, that spits out a new state.
+  - This new state is passed down again, selectors get the values, and components are updated accordingly.
