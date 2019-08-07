@@ -9,9 +9,9 @@ export const SummarizeBar = ({ total, items, nextPage, model = "Model R" }) => {
     <div className="SummarizeBar">
       <Container>
         <div className="info">
-          <p className="total-sum">
+          <div className="total-sum">
             Total <div>${total}</div>
-          </p>
+          </div>
           <p className="model">{model}</p>
         </div>
         <ul className="customization">

@@ -1,7 +1,6 @@
 .ColorChoicesItem {
-  @media (max-width: 700px) {
-    // position: relative;
-  }
+  cursor: pointer;
+
   .color-border {
     border-radius: 50%;
     display: flex;

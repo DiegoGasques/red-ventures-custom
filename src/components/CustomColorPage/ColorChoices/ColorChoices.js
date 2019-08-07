@@ -19,6 +19,7 @@ export const ColorChoices = ({
       setCustomItem(colors[0]);
       onChange(colors[0].id);
     }
+    // eslint-disable-next-line
   }, []);
 
   const onClick = (isActive, id) => {

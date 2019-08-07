@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import CustomPageLayout from "../CustomPageLayout/CustomPageLayout";
 import ColorChoices from "./ColorChoices/ColorChoices";
 
-export const CustomColorPage = ({ custom, description, loaded, history }) => {
+export const CustomColorPage = ({ description }) => {
   const [idActive, setIdActive] = useState(null);
-  useEffect(() => {
-    if (!loaded || custom.length > 2) history.push("/");
-  }, []);
 
   return (
     <div className="CustomColorPage">
@@ -29,12 +26,8 @@ export const CustomColorPage = ({ custom, description, loaded, history }) => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    custom: state.custom,
-    loaded: state.loaded,
-    description: state.color.description
-  };
-};
+const mapStateToProps = ({ color }) => ({
+  description: color.description
+});
 
 export default connect(mapStateToProps)(CustomColorPage);

@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import CustomPageLayout from "../CustomPageLayout/CustomPageLayout";
 import EngineChoices from "./EngineChoices/EngineChoices";
 
-export const CustomEnginePage = ({ custom, loaded, history }) => {
-  useEffect(() => {
-    if (!loaded || custom.length > 1) history.push("/");
-  }, []);
-
+export const CustomEnginePage = ({ custom }) => {
   return (
     <div className="CustomEnginePage">
       <CustomPageLayout page={1}>
@@ -29,12 +25,8 @@ export const CustomEnginePage = ({ custom, loaded, history }) => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    byId: state.engine.byId,
-    custom: state.custom,
-    loaded: state.loaded
-  };
-};
+const mapStateToProps = ({ custom }) => ({
+  custom
+});
 
 export default connect(mapStateToProps)(CustomEnginePage);

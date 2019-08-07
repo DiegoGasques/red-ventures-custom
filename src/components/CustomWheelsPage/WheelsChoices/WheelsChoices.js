@@ -17,6 +17,7 @@ export const WheelsChoices = ({
     if (wheels.length) {
       setCustomItem(wheels[0]);
     }
+    // eslint-disable-next-line
   }, []);
 
   const onClick = (isActive, id) => {

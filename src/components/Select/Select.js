@@ -28,6 +28,7 @@ const Option = ({ children, trackId, id, onClick }) => {
   const { active, setActive } = useSelectContext();
   useEffect(() => {
     if (trackId === 1) setActive(id);
+    // eslint-disable-next-line
   }, []);
   const handleClick = () => {
     console.log("Clicked");

@@ -13,6 +13,7 @@ export const HomePage = ({ loaded, dispatch }) => {
     } else {
       dispatch(setInitData());
     }
+    // eslint-disable-next-line
   }, []);
   return (
     <div className="HomePage">

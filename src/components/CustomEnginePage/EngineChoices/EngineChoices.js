@@ -17,6 +17,7 @@ export const EngineChoices = ({
     if (engines.length) {
       setCustomItem(engines[0]);
     }
+    // eslint-disable-next-line
   }, []);
 
   const onClick = (isActive, id) => {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import Page from "../Page/Page";
 import { clearCustom } from "../../store/actions/custom.action";
@@ -9,27 +9,19 @@ export const CustomFinalPage = ({
   custom,
   defaultPrice,
   finalPrice,
-  loaded,
   history
 }) => {
-  useEffect(() => {
-    if (!loaded || custom.length > 3) history.push("/");
-  }, []);
-
   const handleClick = () => {
     clearCustom();
     history.push("/model-r/custom/1");
   };
-  console.log(custom[0]);
+
   return (
     <div className="CustomFinalPage">
       <Page>
         <div className="main-content">
           <div className="image-container">
-            <img
-              src={`/assets/final-${custom[1].id}.png`}
-              alt="Final model image"
-            />
+            <img src={`/assets/final-${custom[1].id}.png`} alt="Final model" />
           </div>
           <div className="final-model-details">
             <h2>
@@ -88,7 +80,6 @@ export const CustomFinalPage = ({
 
 const mapStateToProps = state => {
   return {
-    loaded: state.loaded,
     custom: state.custom,
     defaultPrice: state.defaultPrice,
     finalPrice: state.custom.reduce(

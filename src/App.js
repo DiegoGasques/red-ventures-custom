@@ -5,38 +5,35 @@ import CustomEnginePage from "./components/CustomEnginePage/CustomEnginePage";
 import CustomColorPage from "./components/CustomColorPage/CustomColorPage";
 import CustomWheelsPage from "./components/CustomWheelsPage/CustomWheelsPage";
 import CustomFinalPage from "./components/CustomFinalPage/CustomFinalPage";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route
+        <ProtectedRoute
           exact
           path="/model-r/custom/1"
-          render={props => {
-            return <CustomEnginePage {...props} />;
-          }}
+          step={1}
+          component={CustomEnginePage}
         />
-        <Route
+        <ProtectedRoute
           exact
           path="/model-r/custom/2"
-          render={props => {
-            return <CustomColorPage {...props} />;
-          }}
+          step={2}
+          component={CustomColorPage}
         />
-        <Route
+        <ProtectedRoute
           exact
           path="/model-r/custom/3"
-          render={props => {
-            return <CustomWheelsPage {...props} />;
-          }}
+          step={3}
+          component={CustomWheelsPage}
         />
-        <Route
+        <ProtectedRoute
           exact
           path="/model-r/custom/final"
-          render={props => {
-            return <CustomFinalPage {...props} />;
-          }}
+          step={4}
+          component={CustomFinalPage}
         />
         <Route component={HomePage} />
       </Switch>

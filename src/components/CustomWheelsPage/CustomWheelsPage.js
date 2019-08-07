@@ -1,13 +1,8 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import React from "react";
 import CustomPageLayout from "../CustomPageLayout/CustomPageLayout";
 import WheelsChoices from "./WheelsChoices/WheelsChoices";
 
-export const CustomWheelsPage = ({ custom, loaded, history }) => {
-  useEffect(() => {
-    if (!loaded || custom.length > 3) history.push("/");
-  }, [custom]);
-
+export const CustomWheelsPage = () => {
   return (
     <div className="CustomWheelsPage">
       <CustomPageLayout page={3}>
@@ -22,11 +17,4 @@ export const CustomWheelsPage = ({ custom, loaded, history }) => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    custom: state.custom,
-    loaded: state.loaded
-  };
-};
-
-export default connect(mapStateToProps)(CustomWheelsPage);
+export default CustomWheelsPage;
